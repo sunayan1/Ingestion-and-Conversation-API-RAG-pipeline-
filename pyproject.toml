@@ -1,0 +1,28 @@
+[project]
+name = "rag-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "sunayan1", email = "sunayanduwal999@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "groq>=1.7.0",
+    "pypdf>=6.19.0",
+    "python-dotenv>=1.2.3",
+    "python-multipart>=0.0.32",
+    "qdrant-client>=1.19.1",
+    "redis>=8.1.0",
+    "requests>=2.34.2",
+    "sentence-transformers>=6.1.0",
+    "sqlalchemy>=2.0.54",
+]
+
+[tool.fastapi]
+entrypoint = "rag_pipeline.main:app"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
